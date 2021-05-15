@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body {
+            background-color: whitesmoke;
+            color: teal;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin: 20px 40px 20px 40px;
+            padding: 10px 20px 10px 20px;
+            
+        }
+        p {
+            font-size: 18px;
+            text-align: justify;
+        }
+        #header {
+            font-size: 38px;
+            text-align: center;
+            float: left;
+            margin: 20px 0px 20px 20px;
+        }
+        #header-img {
+            width: 75px;
+            height: 75px;
+            box-shadow: 0 10px 20px rgba(120, 0, 120, 0.3);
+            border-radius: 70%;
+            margin: 10px 0px 10px 200px;
+        }
+        .img_product {
+            width: 200px;
+            height: 250px;
+            padding: 30px 20px 0px 10px;
+            display: flexbox;
+        }
+        video {
+            margin: 20px 0px 20px 40px;
+            padding: 10px 0px 20px 10px;
+            width: 420px;
+            height: 240px;
+        }
+        #nav_bar {
+            position: fixed;
+            top: 0px;
+            left: 30px;
+            width: 88%;
+            margin: 0px 40px 20px 0px;
+            padding: 0px 20px 10px 20px;
+        }
+        .nav_link {
+            font-size: 18px;
+            color: salmon;
+            text-align: right;
+        }
+        .description {
+            font-size: 20px;
+            text-align: justify;
+        }
+        #form {
+            font-size: 16px;
+            height: 20px;
+            width: 254px;
+        }
+        #submit {
+            margin: 0px 40px 0px 40px;
+            height: 22px;
+            position: absolute;
+        }
+        button:hover {
+            background-color: rgb(100, 154, 255);
+            transform: scale(1.05);
+        }
+        footer {
+            text-align: end;
+            opacity: 0.7;
+        }
+        .item1 {
+            background: lightyellow;
+            grid-area: header;
+        }
+        .item2 {
+            background: lightblue;
+            grid-area: content;
+        }
+        .item3 {
+            background: lightgreen;
+            grid-area: footer;
+        }
+
+        /*smaller device */
+        @media (max-width: 500px) {
+            .img_product {
+                width: 100px;
+                height: 150px;
+            }
+            video {
+                width: 50%;
+                height: 50%; 
+            }
+            #nav_bar {
+                position: absolute;
+                left: 50%;
+            }
+        }
+    </style>
+  
+    <body>
+        <header class="item1">
+            <h1 id="header">imandaCraft</h1>
+            <img src="image/logo_ori.jpg" alt="company logo" id="header-img">
+            
+            <nav id="nav_bar" class="item1">
+                <a href="#" class="nav_link">Home</a> |
+                <a href="project2survey.html" class="nav_link">Survey Product</a> |
+                <a href="project3contact.html" class="nav_link">Contact</a>
+            </nav>
+            
+        </header>
+
+        <section class="item2">
+            <p class="description"><strong>imandaCraft</strong> is a branch of the Imanda corporation which is engaged in the art of crocheting.
+                <strong>imandaCraft</strong> is expected to be a forum for channeling interests, talents, and hobbies, and helping to open up jobs in order to provide a comfortable and useful life.</p>
+            <br>
+                    
+            <video id="video" controls>
+                <source src="image/video_tutor.mp4" type="video/mp4">
+            </video>
+
+            <p>Above is a short video on how to crochet and make a pattern for a table mat.
+                Some products that have been made such as pouches, jars, and mask connector can be seen below.<br>
+                <img src="image/table_mats_blue.jpeg" alt="table_mats_blue" class="img_product">
+                <img src="image/table_mats_red.jpeg" alt="table_mats_red" class="img_product">
+                <img src="image/table_mats_long.jpeg" alt="table_mats_long" class="img_product">
+                <img src="image/table_mats_round.jpeg" alt="table_mats_round" class="img_product">
+                <img src="image/table_mats_square.jpeg" alt="table_mats_square" class="img_product">
+                <img src="image/jar.jpeg" alt="jar" class="img_product">
+                <img src="image/pouch_yellow.jpeg" alt="pouch_yellow" class="img_product">
+                <img src="image/mask_connector.jpeg" alt="mask_connector" class="img_product">
+            </p>
+            <hr>
+            
+            <p>Want to know more about imandaCraft?
+                We will provide interesting information about crochet techniques and patterns,
+                as well as products that can be purchased from imandaCraft.
+                Let's subscribe.</p>
+            <form id="form" action="https://www.freecodecamp.com/email-submit">
+                <label for="email_label">Email:</label>
+                <input type="email" id="email" name="email" placeholder="username@email.com"
+                pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/">
+                <button type="submit" id="submit">Submit</button>
+            </form>
+        </section>
+    </body>
+
+    <footer class="item3">&copyimandaCraft</footer>
+
+</html>

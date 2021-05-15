@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body {
+            background-color: wheat;
+            color: teal;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px 20px 20px 20px;
+            padding: 10px 20px 20px 10px;
+            background: linear-gradient(135deg, pink, yellow, rgb(100,204,255));
+        }
+        #title {
+            font-size: 36px;
+            text-align: center;
+            text-transform: capitalize;
+            
+        }
+        #description {
+            font-size: 18px;
+            text-align: justify;
+            
+        }
+        img {
+            width: 300px;
+            height: 300px;
+            box-shadow: 0 10px 20px rgba(0, 0.1, 0, 0.1);
+            
+            
+        }
+        #survey-form {
+            font-size: 22px;
+            
+        }
+        #name {
+            height: 20px;
+            width: 248px;
+            flex: auto;
+        }
+        #email {
+            height: 20px;
+            width: 254px;
+        }
+        #number {
+            height: 20px;
+            width: 225px;
+        }
+        #gender {
+            height: 20px;
+        }
+        #age {
+            height: 20px;
+        }
+        [type="radio"] {
+            margin: 10px 0px 10px 0px;
+            
+        }
+        [type="checkbox"] {
+            margin: 10px 10px 10px 0px;
+        }
+        textarea {
+            opacity: 0.7;
+            height: 50px;
+            margin: 10px 0px 5px 0px;
+        }
+        #submit {
+            margin: 10px 0px 10px 0px;
+            height: 30px;
+        }
+        button:hover {
+            background-color: rgb(255, 201, 100);
+        }
+        footer {
+            text-align: end;
+        }
+        #box-container {
+            display: flex;
+            height: 30px;
+            flex-direction: row;
+        }
+        #box-1 {
+            background-color: dodgerblue;
+            width: 75%;
+            height: 50%;
+        }
+
+        #box-2 {
+            background-color: orangered;
+            width: 25%;
+            height: 50%;
+        }
+    </style>    
+    
+    <body>
+        <header>
+            <h1 id="title">popularity survey of crochet products</h1>
+        </header>
+        <section>
+            <p id="description">Knitting and crocheting is very similar. The basic differences is knitting using two needle and crochetting using one hook.
+                <strong>Crocheting</strong> is a form of art using a hook and yarn. In crochet, there are many stitching techniques and the combination of stitch that form a patterns.
+                This <strong>pattern</strong> makes differences between crochet product and knit product.
+                Crochet products consist of decorative products and wearable products.
+                <strong>Decorative products</strong> such as table mats, pot holds, mandalas, and amigurumi.
+                While <strong>wearable products</strong> such as bags, wallets, pouches, socks, and baby shoes.
+                This survey aims to determine the <strong>popularity and preferences</strong> of crochet products against the age of the respondents.
+                The results of this survey will be used as <strong>feedback</strong> to support and develop product quality.</p>
+            <img src="image/table_mats_red.jpeg" alt="Crochet product" id="image_mats">
+            <img src="image/pouch_yellow.jpeg" alt="Crochet product" id="image_pouch">
+             
+            <hr>    
+            
+            <form id="survey-form">
+                <label for="name_label">Name:</label>
+                <input type="text" id="name" name="name" placeholder="type your name here" required><br>
+                <label for="email_label">Email:</label>
+                <input type="text" id="email" name="email" placeholder="type your email here" required><br>
+                <label for="number_label">Number:</label>
+                <input type="number" id="number" name="number" placeholder="type your phone number here" required><br>
+
+                <label for="gender">Gender:</label>
+                <select name="gender" id="gender">
+                    <option value=" "></option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+
+                <label for="age">Age:</label>
+                <select name="age" id="age">
+                    <option value=" "></option>
+                    <option value="12">12-18 years old</option>
+                    <option value="19">19-25 years old</option>
+                    <option value="25">26-32 years old</option>
+                    <option value="33">33-40 years old</option>
+                </select>
+                
+                <hr>
+
+                <fieldset>
+                    <legend>How do you think about crochet product?</legend>
+                    <label for="very"><input id="very" type="radio" name="preferences" value="very"> Excellent</label><br>
+                    <label for="like"><input id="like" type="radio" name="preferences" value="like"> Very good</label><br>
+                    <label for="good"><input id="good" type="radio" name="preferences" value="good"> Good</label><br>
+                    <label for="not"><input id="not" type="radio" name="preferences" value="not"> Not Bad</label><br>
+                    <label for="bad"><input id="bad" type="radio" name="preferences" value="bad"> Bad</label><br>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>What product do you like?</legend>
+                    <label for="bag"><input id="bag" type="checkbox" name="products" value="bag"> Bag</label><br>
+                    <label for="wallet"><input id="wallet" type="checkbox" name="products" value="wallet"> Wallet</label><br>
+                    <label for="pouch"><input id="pouch" type="checkbox" name="products" value="pouch"> Pouch</label><br>
+                    <label for="keychain"><input id="keychain" type="checkbox" name="products" value="keychain"> Key Chain</label><br>
+                    <label for="doll"><input id="doll" type="checkbox" name="products" value="doll"> Amigurumi</label><br>
+                    <label for="mats"><input id="mats" type="checkbox" name="products" value="mats"> Table Mats</label><br>
+                    <label for="connector"><input id="connector" type="checkbox" name="products" value="connector"> Mask Connector</label><br>
+                    <label for="cover"><input id="cover" type="checkbox" name="products" value="cover"> Jar Cover</label>
+                </fieldset>                
+                
+                <br>
+                <div id="box-container">
+                    <div id="box-1"></div>
+                    <div id="box-2"></div>
+                </div>
+
+                <legend>Suggestion for next crochet product:</legend>
+                <label for="suggest"><textarea id="suggest" name="suggest" placeholder="optional"></textarea></label><br>
+
+                <button type="submit" id="submit">Submit</button>
+            </form>
+        </section>
+
+        
+    </body>
+
+    
+    <footer>&copyimandaCraft</footer>
+</html>
+
